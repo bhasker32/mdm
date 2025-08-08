@@ -1,0 +1,2598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltbook Laptops - Premium Tech Experience</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+/* Enhanced Voltbook Premium Design */
+:root {
+  --bg: #0a0d14;
+  --card: #111827;
+  --card-hover: #1f2937;
+  --muted: #9ca3af;
+  --accent: #3b82f6;
+  --accent-2: #10b981;
+  --accent-hover: #2563eb;
+  --text: #f9fafb;
+  --border: rgba(255, 255, 255, 0.1);
+  --glass: rgba(255, 255, 255, 0.05);
+  --shadow: rgba(0, 0, 0, 0.3);
+  --gradient: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  --glow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(10, 13, 20, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.brand i {
+  font-size: 1.8rem;
+  color: var(--accent-2);
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mini-search {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: var(--text);
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.mini-search:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+  transform: scale(1.05);
+}
+
+.icon-btn {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--glow);
+}
+
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--accent-2);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 2rem 4rem;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1), transparent 70%);
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.primary-btn {
+  background: var(--gradient);
+  color: white;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+}
+
+.secondary-btn {
+  background: var(--accent-2);
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.ghost-btn {
+  background: transparent;
+  border: 2px solid var(--border);
+  color: var(--text);
+}
+
+.ghost-btn:hover {
+  border-color: var(--accent);
+  background: var(--glass);
+  transform: translateY(-2px);
+}
+
+.sale-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Hero Visual */
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.floating-laptop {
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.laptop-3d {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--card), var(--card-hover));
+  border-radius: 20px;
+  position: relative;
+  transform: perspective(1000px) rotateX(15deg) rotateY(-15deg);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(59, 130, 246, 0.2);
+  border: 1px solid var(--border);
+}
+
+.laptop-3d::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 120px;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.laptop-3d::after {
+  content: '⚡';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: var(--accent);
+  text-shadow: 0 0 20px currentColor;
+}
+
+@keyframes float {
+  0%, 100% { transform: perspective(1000px) rotateX(15deg) rotateY(-15deg) translateY(0px); }
+  50% { transform: perspective(1000px) rotateX(15deg) rotateY(-15deg) translateY(-20px); }
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input, .filter-select, .sort-select {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus, .filter-select:focus, .sort-select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px var(--shadow);
+  border-color: var(--accent);
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.prod-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.product-card:hover .prod-img {
+  transform: scale(1.1);
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-card:hover .overlay-btn {
+  transform: translateY(0);
+}
+
+.product-content {
+  padding: 1.5rem;
+}
+
+.prod-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.prod-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent-2);
+  font-size: 1.1rem;
+}
+
+.small {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Features Section */
+.dark-section {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--glass);
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+/* Reviews */
+.review-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.review {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.review::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+/* Contact */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-details {
+  margin: 2rem 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.contact-item i {
+  color: var(--accent);
+  width: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--text);
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+/* Footer */
+.footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.footer-brand i {
+  color: var(--accent-2);
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* Modals */
+.modal, .cart-page, .popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-card, .cart-card, .popup-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px) scale(0.9); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.modal-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.modal-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.modal-body {
+  flex: 1;
+}
+
+.modal-body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-body p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  white-space: pre-line;
+}
+
+.modal-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price.large {
+  font-size: 1.5rem;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.close:hover {
+  background: var(--card-hover);
+  color: var(--text);
+  transform: rotate(90deg);
+}
+
+/* Cart */
+.cart-card {
+  padding: 2rem;
+  width: 600px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.cart-items {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: var(--glass);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  background: var(--card-hover);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--glass);
+  border-radius: 10px;
+}
+
+.total-price {
+  font-size: 1.5rem;
+  color: var(--accent-2);
+}
+
+.checkout-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Popup */
+.popup-card {
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+}
+
+.popup-icon {
+  font-size: 3rem;
+  color: var(--accent-2);
+  margin-bottom: 1rem;
+}
+
+.popup-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.popup-content p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.popup-content input {
+  width: 100%;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.popup-content input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.popup-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: var(--card);
+  color: var(--text);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--shadow);
+  border: 1px solid var(--border);
+  max-width: 400px;
+  z-index: 3000;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-actions {
+    gap: 0.5rem;
+  }
+  
+  .mini-search {
+    width: 150px;
+  }
+  
+  .hero {
+    padding: 6rem 1rem 2rem;
+  }
+  
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .controls {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .controls input,
+  .controls select {
+    width: 100%;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .modal-card {
+    flex-direction: column;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .modal-img {
+    width: 100%;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .cart-card {
+    width: 90vw;
+    margin: 1rem;
+  }
+  
+  .popup-card {
+    width: 90vw;
+    margin: 1rem;
+  }
+}
+
+/* Light mode */
+.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --card-hover: #f1f5f9;
+  --muted: #64748b;
+  --text: #1e293b;
+  --border: rgba(0, 0, 0, 0.1);
+  --glass: rgba(0, 0, 0, 0.02);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --glow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--border);
+  border-radius: 50%;
+  border-top-color: var(--accent);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.hidden { display: none !important; }
+.visible { display: block !important; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-1 { gap: 0.5rem; }
+.gap-2 { gap: 1rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+
+
+
+
+.festive-alert {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+  z-index: 1500;
+  animation: bounceIn 0.5s ease, pulse 2s infinite 1s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 280px;
+}
+
+.festive-alert:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+}
+
+.festive-alert-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.festive-icon {
+  font-size: 1.5rem;
+  animation: rotate 2s linear infinite;
+}
+
+.festive-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.festive-close {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.festive-close:hover {
+  opacity: 1;
+}
+
+.sale-banner-top {
+  background: linear-gradient(90deg, #f59e0b, #ef4444, #ec4899, #8b5cf6);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3) translateX(100px); opacity: 0; }
+  50% { transform: scale(1.05) translateX(-10px); }
+  70% { transform: scale(0.9) translateX(5px); }
+  100% { transform: scale(1) translateX(0); opacity: 1; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced sale banner in hero */
+.hero .sale-banner {
+  background: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899);
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: glow 2s infinite, pulse 3s infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4); }
+  50% { box-shadow: 0 20px 50px rgba(245, 158, 11, 0.6); }
+}
+
+/* Sale highlights in product cards */
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #ef4444, #f59e0b);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 10;
+  animation: pulse 2s infinite;
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+.product-card {
+  position: relative;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .festive-alert {
+    right: 10px;
+    max-width: 250px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .festive-text {
+    font-size: 0.8rem;
+  }
+}
+    </style>
+    <script>
+// Enhanced Voltbook JavaScript with 3D effects and animations
+
+// Data & placeholders
+const placeholderSVG = (title, bg = '#111827', fg = '#3b82f6') => {
+  return `data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500' viewBox='0 0 800 500'>
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:${bg};stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect width='100%' height='100%' fill='url(#grad)' rx='20'/>
+    <circle cx="400" cy="250" r="80" fill="${fg}" opacity="0.1"/>
+    <text x='50%' y='45%' font-size='32' text-anchor='middle' fill='${fg}' font-family='Inter,sans-serif' font-weight='600'>${title}</text>
+    <text x='50%' y='60%' font-size='16' text-anchor='middle' fill='#9ca3af' font-family='Inter,sans-serif'>Premium Series</text>
+  </svg>`)}`;
+};
+
+const products = [
+  {
+    id: 'air-2025',
+    name: 'Voltbook Air',
+    price: 69999,
+    desc: 'Ultra-lightweight design perfect for students and professionals. Features 14" FHD display, all-day 12-hour battery life, 8GB RAM, and lightning-fast 256GB SSD.',
+    img: placeholderSVG('Voltbook Air', '#0f172a', '#3b82f6'),
+    specs: ['14" FHD Display', '8 GB DDR4 RAM', '256 GB NVMe SSD', '12 hrs Battery Life', 'Intel Core i5', 'Thunderbolt 4'],
+    category: 'ultrabook',
+    rating: 4.8
+  },
+  {
+    id: 'pro-2025',
+    name: 'Voltbook Pro',
+    price: 99999,
+    desc: 'Built for creators and power users. Stunning 16" QHD display, 16GB RAM, 512GB SSD storage, and optional dedicated GPU for intensive creative workflows.',
+    img: placeholderSVG('Voltbook Pro', '#1e1b4b', '#10b981'),
+    specs: ['16" QHD Display', '16 GB DDR4 RAM', '512 GB NVMe SSD', 'NVIDIA RTX 4060', 'Intel Core i7', 'Studio Display'],
+    category: 'professional',
+    rating: 4.9
+  },
+  {
+    id: 'max-2025',
+    name: 'Voltbook Max',
+    price: 129999,
+    desc: 'Ultimate performance machine for gaming and content creation. Features 16" 165Hz display, massive 32GB RAM, 1TB SSD, and high-performance GPU.',
+    img: placeholderSVG('Voltbook Max', '#450a0a', '#f59e0b'),
+    specs: ['16" 165Hz Display', '32 GB DDR5 RAM', '1 TB NVMe SSD', 'NVIDIA RTX 4080', 'Intel Core i9', 'Advanced Cooling'],
+    category: 'gaming',
+    rating: 4.7
+  }
+];
+
+// Enhanced reviews with more details
+const reviews = [
+  {
+    name: 'Aisha Patel',
+    text: 'The Voltbook Air has been a game-changer for my college studies. The battery literally lasts through my longest days, and the build quality is exceptional for the price point.',
+    rating: 5,
+    product: 'Voltbook Air',
+    verified: true
+  },
+  {
+    name: 'Rahul Sharma', 
+    text: 'As a video editor, the Voltbook Pro handles my 4K workflow smoothly. The display is incredibly color-accurate and the performance is consistently reliable.',
+    rating: 5,
+    product: 'Voltbook Pro',
+    verified: true
+  },
+  {
+    name: 'Neha Kumar',
+    text: 'The Max is an absolute beast for gaming! The 165Hz screen is buttery smooth, and even demanding games run flawlessly. Worth every rupee.',
+    rating: 4,
+    product: 'Voltbook Max',
+    verified: true
+  },
+  {
+    name: 'Arjun Singh',
+    text: 'Switched from a MacBook and couldn\'t be happier. The Voltbook Pro offers better value with superior performance and customization options.',
+    rating: 5,
+    product: 'Voltbook Pro',
+    verified: true
+  }
+];
+
+// App state with enhanced features
+let state = {
+  products: [...products],
+  cart: [],
+  reviewIndex: 0,
+  saleEnd: Date.now() + 1000 * 60 * 60 * 2, // 2 hours from load
+  isLoading: false,
+  filters: {
+    search: '',
+    priceRange: 'all',
+    sort: ''
+  }
+};
+
+// Enhanced utilities
+const qs = (selector, element = document) => element.querySelector(selector);
+const qsa = (selector, element = document) => Array.from(element.querySelectorAll(selector));
+
+// Enhanced animations
+const animateElement = (element, animation, duration = 300) => {
+  if (!element) return;
+  element.style.animation = `${animation} ${duration}ms ease-in-out`;
+  setTimeout(() => {
+    element.style.animation = '';
+  }, duration);
+};
+
+const createRipple = (event, element) => {
+  const ripple = document.createElement('span');
+  const rect = element.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
+  const x = event.clientX - rect.left - size / 2;
+  const y = event.clientY - rect.top - size / 2;
+  
+  ripple.style.cssText = `
+    position: absolute;
+    width: ${size}px;
+    height: ${size}px;
+    left: ${x}px;
+    top: ${y}px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+  `;
+  
+  element.style.position = 'relative';
+  element.style.overflow = 'hidden';
+  element.appendChild(ripple);
+  
+  setTimeout(() => ripple.remove(), 600);
+};
+
+// Enhanced product rendering with animations
+function renderProducts(list = state.products) {
+  const container = qs('#product-container');
+  const template = qs('#productTemplate');
+  
+  if (!container || !template) return;
+  
+  // Add loading animation
+  container.innerHTML = '<div class="loading-container" style="grid-column: 1/-1; text-align: center; padding: 2rem;"><div class="loading"></div></div>';
+  
+  setTimeout(() => {
+    container.innerHTML = '';
+    
+    list.forEach((product, index) => {
+      const node = template.content.cloneNode(true);
+      const article = node.querySelector('article');
+      
+      // Add staggered animation
+      article.style.animationDelay = `${index * 100}ms`;
+      article.classList.add('fade-in-up');
+      
+      article.dataset.id = product.id;
+      node.querySelector('.prod-img').src = product.img;
+      node.querySelector('.prod-img').alt = product.name;
+      node.querySelector('.prod-title').textContent = product.name;
+      node.querySelector('.prod-desc').textContent = product.desc;
+      node.querySelector('.price.small').textContent = `₹${product.price.toLocaleString()}`;
+      
+      // Enhanced button interactions
+      const addBtn = node.querySelector('.add-btn');
+      const viewBtn = node.querySelector('.view-btn');
+      
+      addBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        addToCart(product.id);
+        animateElement(addBtn, 'pulse');
+      });
+      
+      viewBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModal(product.id);
+      });
+      
+      container.appendChild(node);
+    });
+    
+    // Trigger animations
+    setTimeout(() => {
+      qsa('.fade-in-up').forEach(el => el.classList.add('visible'));
+    }, 100);
+  }, 300);
+}
+
+// Enhanced search and filtering
+function applyFilters() {
+  const searchQuery = qs('#searchInput')?.value.trim().toLowerCase() || '';
+  const priceFilter = qs('#priceFilter')?.value || 'all';
+  const sortOption = qs('#sortSelect')?.value || '';
+  
+  let filteredProducts = products.filter(product => 
+    product.name.toLowerCase().includes(searchQuery) || 
+    product.desc.toLowerCase().includes(searchQuery) ||
+    product.specs.some(spec => spec.toLowerCase().includes(searchQuery))
+  );
+  
+  // Apply price filter
+  if (priceFilter !== 'all') {
+    const [min, max] = priceFilter.split('-').map(Number);
+    filteredProducts = filteredProducts.filter(product => 
+      product.price >= min && product.price <= max
+    );
+  }
+  
+  // Apply sorting
+  switch (sortOption) {
+    case 'low-high':
+      filteredProducts.sort((a, b) => a.price - b.price);
+      break;
+    case 'high-low':
+      filteredProducts.sort((a, b) => b.price - a.price);
+      break;
+    case 'rating':
+      filteredProducts.sort((a, b) => b.rating - a.rating);
+      break;
+    case 'name':
+      filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+  }
+  
+  state.products = filteredProducts;
+  renderProducts(filteredProducts);
+  
+  // Show results count
+  showToast(`Found ${filteredProducts.length} product${filteredProducts.length !== 1 ? 's' : ''}`);
+}
+
+// Enhanced modal with better animations
+function openModal(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+  
+  const modal = qs('#productModal');
+  if (!modal) return;
+  
+  qs('#modalImg').src = product.img;
+  qs('#modalImg').alt = product.name;
+  qs('#modalTitle').textContent = product.name;
+  qs('#modalDesc').textContent = `${product.desc}\n\nSpecifications:\n${product.specs.map(spec => `• ${spec}`).join('\n')}`;
+  qs('#modalPrice').textContent = `₹${product.price.toLocaleString()}`;
+  
+  const addToCartBtn = qs('#modalAddCart');
+  addToCartBtn.onclick = () => {
+    addToCart(product.id);
+    closeModal();
+  };
+  
+  modal.style.display = 'flex';
+  modal.setAttribute('aria-hidden', 'false');
+  animateElement(modal.querySelector('.modal-card'), 'slideIn');
+  
+  // Prevent body scroll
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modal = qs('#productModal');
+  if (!modal) return;
+  
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = 'auto';
+}
+
+// Enhanced cart functionality
+function addToCart(productId) {
+  const existingItem = state.cart.find(item => item.id === productId);
+  const product = products.find(p => p.id === productId);
+  
+  if (existingItem) {
+    existingItem.qty += 1;
+    showToast(`${product.name} quantity updated in cart`);
+  } else {
+    state.cart.push({ id: productId, qty: 1 });
+    showToast(`${product.name} added to cart`);
+  }
+  
+  updateCartCount();
+  animateCartIcon();
+}
+
+function animateCartIcon() {
+  const cartBtn = qs('#goToCart');
+  animateElement(cartBtn, 'bounce');
+}
+
+function updateCartCount() {
+  const totalItems = state.cart.reduce((sum, item) => sum + item.qty, 0);
+  const countElement = qs('#cart-count');
+  if (!countElement) return;
+  
+  countElement.textContent = totalItems;
+  
+  if (totalItems > 0) {
+    countElement.style.display = 'flex';
+    animateElement(countElement, 'pulse');
+  } else {
+    countElement.style.display = 'none';
+  }
+}
+
+// Enhanced cart rendering
+function renderCart() {
+  const container = qs('#cartItems');
+  if (!container) return;
+  
+  container.innerHTML = '';
+  
+  if (state.cart.length === 0) {
+    container.innerHTML = `
+      <div class="empty-cart" style="text-align: center; padding: 3rem; color: var(--muted);">
+        <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+        <h3>Your cart is empty</h3>
+        <p>Start shopping to add items to your cart</p>
+      </div>
+    `;
+    const totalEl = qs('#cartTotal');
+    if (totalEl) totalEl.textContent = '₹0';
+    return;
+  }
+  
+  let totalAmount = 0;
+  
+  state.cart.forEach(cartItem => {
+    const product = products.find(p => p.id === cartItem.id);
+    if (!product) return;
+    
+    const itemTotal = product.price * cartItem.qty;
+    totalAmount += itemTotal;
+    
+    const cartItemElement = document.createElement('div');
+    cartItemElement.className = 'cart-item';
+    cartItemElement.innerHTML = `
+      <img src="${product.img}" alt="${product.name}">
+      <div class="cart-item-info" style="flex: 1;">
+        <h4 style="margin-bottom: 0.5rem; font-weight: 600;">${product.name}</h4>
+        <p style="color: var(--muted); font-size: 0.9rem;">₹${product.price.toLocaleString()} × ${cartItem.qty}</p>
+        <p style="color: var(--accent-2); font-weight: 600;">₹${itemTotal.toLocaleString()}</p>
+      </div>
+      <div class="cart-item-controls">
+        <button class="btn small ghost-btn dec-btn" ${cartItem.qty <= 1 ? 'disabled' : ''}>-</button>
+        <span style="min-width: 30px; text-align: center; font-weight: 600;">${cartItem.qty}</span>
+        <button class="btn small ghost-btn inc-btn">+</button>
+        <button class="btn small secondary-btn remove-btn" style="margin-left: 0.5rem;">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    `;
+    
+    // Add event listeners
+    cartItemElement.querySelector('.inc-btn').addEventListener('click', () => {
+      cartItem.qty++;
+      renderCart();
+      updateCartCount();
+      showToast('Quantity updated');
+    });
+    
+    cartItemElement.querySelector('.dec-btn').addEventListener('click', () => {
+      if (cartItem.qty > 1) {
+        cartItem.qty--;
+        renderCart();
+        updateCartCount();
+        showToast('Quantity updated');
+      }
+    });
+    
+    cartItemElement.querySelector('.remove-btn').addEventListener('click', () => {
+      state.cart = state.cart.filter(item => item !== cartItem);
+      renderCart();
+      updateCartCount();
+      showToast(`${product.name} removed from cart`);
+    });
+    
+    container.appendChild(cartItemElement);
+  });
+  
+  const totalEl = qs('#cartTotal');
+  if (totalEl) totalEl.textContent = `₹${totalAmount.toLocaleString()}`;
+}
+
+function openCart() {
+  renderCart();
+  const cartPage = qs('#cartPage');
+  if (!cartPage) return;
+  
+  cartPage.style.display = 'flex';
+  cartPage.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  const cartPage = qs('#cartPage');
+  if (!cartPage) return;
+  
+  cartPage.style.display = 'none';
+  cartPage.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = 'auto';
+}
+
+// Enhanced checkout process
+function checkout() {
+  if (state.cart.length === 0) {
+    showToast('Your cart is empty', 'error');
+    return;
+  }
+  
+  const totalAmount = state.cart.reduce((sum, item) => {
+    const product = products.find(p => p.id === item.id);
+    return sum + (product.price * item.qty);
+  }, 0);
+  
+  // Enhanced checkout simulation
+  const customerName = prompt('Enter your name for checkout:');
+  if (!customerName) return;
+  
+  const customerEmail = prompt('Enter your email address:');
+  if (!customerEmail || !customerEmail.includes('@')) {
+    showToast('Please enter a valid email address', 'error');
+    return;
+  }
+  
+  const customerPhone = prompt('Enter your phone number:');
+  if (!customerPhone) return;
+  
+  // Simulate processing
+  showToast('Processing your order...', 'info');
+  
+  setTimeout(() => {
+    // Generate order ID
+    const orderId = 'VB' + Date.now().toString().slice(-6);
+    
+    // Clear cart
+    state.cart = [];
+    updateCartCount();
+    closeCart();
+    
+    // Show success message
+    showToast(`🎉 Order placed successfully!\nOrder ID: ${orderId}\nTotal: ₹${totalAmount.toLocaleString()}\nConfirmation sent to ${customerEmail}`, 'success');
+    
+    // You could integrate with a real payment gateway here
+  }, 2000);
+}
+
+// Enhanced review system
+function renderReview() {
+  const review = reviews[state.reviewIndex];
+  const container = qs('#reviewSlider');
+  if (!container) return;
+  
+  container.innerHTML = `
+    <div class="review">
+      <div class="review-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+        <div class="reviewer-avatar" style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.2rem;">
+          ${review.name.split(' ').map(n => n[0]).join('')}
+        </div>
+        <div>
+          <h4 style="margin-bottom: 0.25rem;">${review.name}</h4>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div style="color: var(--accent-2);">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
+            <span style="color: var(--muted); font-size: 0.9rem;">• ${review.product}</span>
+            ${review.verified ? '<span style="color: var(--accent); font-size: 0.8rem;">✓ Verified</span>' : ''}
+          </div>
+        </div>
+      </div>
+      <p style="color: var(--muted); line-height: 1.6; font-style: italic;">"${review.text}"</p>
+    </div>
+  `;
+  
+  animateElement(container.querySelector('.review'), 'fadeIn');
+}
+
+function nextReview() {
+  state.reviewIndex = (state.reviewIndex + 1) % reviews.length;
+  renderReview();
+}
+
+function prevReview() {
+  state.reviewIndex = (state.reviewIndex - 1 + reviews.length) % reviews.length;
+  renderReview();
+}
+
+// Enhanced countdown timer with better formatting
+function updateTimer() {
+  const now = Date.now();
+  const timeLeft = state.saleEnd - now;
+  const timerElement = qs('#timer');
+  if (!timerElement) return;
+  
+  if (timeLeft <= 0) {
+    timerElement.textContent = 'SALE ENDED';
+    timerElement.style.color = 'var(--muted)';
+    return;
+  }
+  
+  const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+  timerElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  timerElement.style.color = hours < 1 ? '#ef4444' : 'currentColor';
+}
+
+// Newsletter popup with enhanced animations
+function showNewsletter() {
+  const popup = qs('#newsletterPopup');
+  if (!popup) return;
+  
+  popup.style.display = 'flex';
+  popup.setAttribute('aria-hidden', 'false');
+  animateElement(popup.querySelector('.popup-card'), 'slideIn');
+  document.body.style.overflow = 'hidden';
+}
+
+function hideNewsletter() {
+  const popup = qs('#newsletterPopup');
+  if (!popup) return;
+  
+  popup.style.display = 'none';
+  popup.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = 'auto';
+}
+
+function subscribeNewsletter() {
+  const emailEl = qs('#newsletterEmail');
+  if (!emailEl) return;
+  
+  const email = emailEl.value.trim();
+  
+  if (!email) {
+    showToast('Please enter your email address', 'error');
+    emailEl.focus();
+    return;
+  }
+  
+  if (!email.includes('@') || !email.includes('.')) {
+    showToast('Please enter a valid email address', 'error');
+    emailEl.focus();
+    return;
+  }
+  
+  // Simulate API call
+  showToast('Subscribing...', 'info');
+  
+  setTimeout(() => {
+    hideNewsletter();
+    showToast(`🎉 Welcome aboard! Check ${email} for your 10% discount code VOLT10`, 'success');
+    emailEl.value = '';
+  }, 1500);
+}
+
+// Enhanced toast system with different types
+function showToast(message, type = 'success') {
+  // Remove existing toasts
+  qsa('.toast').forEach(toast => toast.remove());
+  
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  
+  const icons = {
+    success: '✓',
+    error: '✕',
+    info: 'ℹ',
+    warning: '⚠'
+  };
+  
+  const colors = {
+    success: 'var(--accent-2)',
+    error: '#ef4444',
+    info: 'var(--accent)',
+    warning: '#f59e0b'
+  };
+  
+  toast.innerHTML = `
+    <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+      <span style="color: ${colors[type]}; font-weight: bold; font-size: 1.2rem;">${icons[type]}</span>
+      <div style="flex: 1; white-space: pre-line;">${message}</div>
+    </div>
+  `;
+  
+  document.body.appendChild(toast);
+  
+  const duration = message.length > 50 ? 5000 : 3000;
+  setTimeout(() => {
+    toast.style.animation = 'slideOutRight 0.3s ease forwards';
+    setTimeout(() => toast.remove(), 300);
+  }, duration);
+}
+
+// Enhanced dark mode toggle with smooth transition
+function toggleDarkMode() {
+  const html = document.documentElement;
+  const isDark = !html.classList.contains('light');
+  
+  html.classList.toggle('light');
+  const toggleBtn = qs('#darkModeToggle');
+  if (toggleBtn) {
+    toggleBtn.textContent = html.classList.contains('light') ? '🌞' : '🌙';
+  }
+}
+
+// Enhanced contact form handling
+function handleContactForm(event) {
+  event.preventDefault();
+  
+  const nameEl = qs('#name');
+  const emailEl = qs('#email');
+  const messageEl = qs('#message');
+  
+  if (!nameEl || !emailEl || !messageEl) return;
+  
+  const name = nameEl.value.trim();
+  const email = emailEl.value.trim();
+  const message = messageEl.value.trim();
+  
+  // Validation
+  if (!name || !email || !message) {
+    showToast('Please fill in all required fields', 'error');
+    return;
+  }
+  
+  if (!email.includes('@')) {
+    showToast('Please enter a valid email address', 'error');
+    emailEl.focus();
+    return;
+  }
+  
+  // Simulate sending
+  const submitBtn = event.target.querySelector('button[type="submit"]');
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<div class="loading"></div> Sending...';
+  submitBtn.disabled = true;
+  
+  setTimeout(() => {
+    showToast(`Thank you ${name}! We'll respond to ${email} within 24 hours.`, 'success');
+    event.target.reset();
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
+  }, 2000);
+}
+
+// Clear cart with confirmation
+function clearCart() {
+  if (state.cart.length === 0) {
+    showToast('Cart is already empty', 'info');
+    return;
+  }
+  
+  if (confirm('Are you sure you want to clear all items from your cart?')) {
+    state.cart = [];
+    updateCartCount();
+    renderCart();
+    showToast('Cart cleared successfully', 'success');
+  }
+}
+
+// Keyboard shortcuts
+function handleKeyboardShortcuts(event) {
+  // Ctrl/Cmd + K for search
+  if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+    event.preventDefault();
+    const searchEl = qs('#searchInput');
+    if (searchEl) searchEl.focus();
+    return;
+  }
+  
+  // Escape key to close modals
+  if (event.key === 'Escape') {
+    const modal = qs('#productModal');
+    const cart = qs('#cartPage');
+    const popup = qs('#newsletterPopup');
+    
+    if (modal && modal.style.display === 'flex') closeModal();
+    if (cart && cart.style.display === 'flex') closeCart();
+    if (popup && popup.style.display === 'flex') hideNewsletter();
+  }
+}
+
+// Initialize auto-review cycling
+let reviewInterval;
+function startReviewCycling() {
+  reviewInterval = setInterval(() => {
+    nextReview();
+  }, 8000);
+}
+
+function stopReviewCycling() {
+  if (reviewInterval) {
+    clearInterval(reviewInterval);
+    reviewInterval = null;
+  }
+}
+
+// Enhanced initialization
+document.addEventListener('DOMContentLoaded', () => {
+  // Add ripple effect to buttons
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('.btn, .icon-btn, .overlay-btn')) {
+      createRipple(e, e.target);
+    }
+  });
+  
+  // Initial setup
+  renderProducts();
+  renderReview();
+  updateCartCount();
+  updateTimer();
+  
+  // Event listeners for search and filters
+  const searchInput = qs('#searchInput');
+  const miniSearch = qs('#miniSearch');
+  const priceFilter = qs('#priceFilter');
+  const sortSelect = qs('#sortSelect');
+  
+  // Debounced search
+  let searchTimeout;
+  const debouncedSearch = () => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(applyFilters, 300);
+  };
+  
+  if (searchInput) searchInput.addEventListener('input', debouncedSearch);
+  if (miniSearch) {
+    miniSearch.addEventListener('input', (e) => {
+      if (searchInput) searchInput.value = e.target.value;
+      debouncedSearch();
+    });
+  }
+  
+  if (priceFilter) priceFilter.addEventListener('change', applyFilters);
+  if (sortSelect) sortSelect.addEventListener('change', applyFilters);
+  
+  // Modal event listeners
+  const closeModal = qs('#closeModal');
+  const productModal = qs('#productModal');
+  if (closeModal) closeModal.addEventListener('click', closeModal);
+  if (productModal) {
+    productModal.addEventListener('click', (e) => {
+      if (e.target === productModal) closeModal();
+    });
+  }
+  
+  // Cart event listeners
+  const goToCart = qs('#goToCart');
+  const closeCartBtn = qs('#closeCart');
+  const checkoutBtn = qs('#checkoutBtn');
+  const clearCartBtn = qs('#clearCart');
+  
+  if (goToCart) goToCart.addEventListener('click', openCart);
+  if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
+  if (checkoutBtn) checkoutBtn.addEventListener('click', checkout);
+  if (clearCartBtn) clearCartBtn.addEventListener('click', clearCart);
+  
+  // Review controls
+  const nextReviewBtn = qs('#nextReview');
+  const prevReviewBtn = qs('#prevReview');
+  
+  if (nextReviewBtn) {
+    nextReviewBtn.addEventListener('click', () => {
+      stopReviewCycling();
+      nextReview();
+      startReviewCycling();
+    });
+  }
+  
+  if (prevReviewBtn) {
+    prevReviewBtn.addEventListener('click', () => {
+      stopReviewCycling();
+      prevReview();
+      startReviewCycling();
+    });
+  }
+  
+  // Newsletter popup
+  const closePopup = qs('#closePopup');
+  const noThanks = qs('#noThanks');
+  const subscribeBtn = qs('#subscribeBtn');
+  const openNewsletter = qs('#openNewsletter');
+  
+  if (closePopup) closePopup.addEventListener('click', hideNewsletter);
+  if (noThanks) noThanks.addEventListener('click', hideNewsletter);
+  if (subscribeBtn) subscribeBtn.addEventListener('click', subscribeNewsletter);
+  if (openNewsletter) openNewsletter.addEventListener('click', showNewsletter);
+  
+  // Newsletter popup auto-show (delayed)
+  setTimeout(showNewsletter, 15000); // Show after 15 seconds
+  
+  // Contact form
+  const contactForm = qs('#contactForm');
+  if (contactForm) contactForm.addEventListener('submit', handleContactForm);
+  
+  // Dark mode toggle
+  const darkModeToggle = qs('#darkModeToggle');
+  if (darkModeToggle) darkModeToggle.addEventListener('click', toggleDarkMode);
+  
+  // Keyboard shortcuts
+  document.addEventListener('keydown', handleKeyboardShortcuts);
+  
+  // Timer interval
+  setInterval(updateTimer, 1000);
+  
+  // Start review cycling
+  startReviewCycling();
+  
+  // Hero CTA buttons
+  const heroBtns = qsa('.hero .btn');
+  heroBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.textContent.includes('Explore')) {
+        const productsSection = qs('.section');
+        if (productsSection) {
+          productsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (btn.textContent.includes('Watch')) {
+        showToast('Demo video coming soon!', 'info');
+      }
+    });
+  });
+  
+  console.log('🚀 Voltbook application initialized successfully!');
+});
+
+// Add CSS animations for ripple effect
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes ripple {
+    to { transform: scale(4); opacity: 0; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(30px) scale(0.95); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 53%, 80%, 100% { transform: scale(1); }
+    40%, 43% { transform: scale(1.1); }
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+document.head.appendChild(style);
+
+
+
+// Festive Sale Integration Functions
+
+// Navigate to sale page
+function goToSale() {
+  window.open('landing/festive-sale.html', '_blank');
+  // Or use window.location.href = 'festive-sale.html' to open in same tab
+}
+
+// Close festive alert
+function closeFestiveAlert() {
+  const alert = document.getElementById('festiveAlert');
+  if (alert) {
+    alert.style.animation = 'slideOutRight 0.3s ease forwards';
+    setTimeout(() => alert.remove(), 300);
+    
+    // Set a cookie/localStorage to remember user dismissed it
+    localStorage.setItem('festiveAlertDismissed', 'true');
+  }
+}
+
+// Show festive alert with delay
+function showFestiveAlert() {
+  const dismissed = localStorage.getItem('festiveAlertDismissed');
+  if (!dismissed) {
+    const alert = document.getElementById('festiveAlert');
+    if (alert) {
+      setTimeout(() => {
+        alert.style.display = 'block';
+      }, 3000); // Show after 3 seconds
+    }
+  } else {
+    // Remove alert if user previously dismissed it
+    const alert = document.getElementById('festiveAlert');
+    if (alert) alert.remove();
+  }
+}
+
+// Add sale badges to products
+function addSaleBadges() {
+  const saleOffers = {
+    'air-2025': '29% OFF',
+    'pro-2025': '30% OFF', 
+    'max-2025': '31% OFF'
+  };
+  
+  const productCards = document.querySelectorAll('.product-card');
+  productCards.forEach(card => {
+    const productId = card.dataset.id;
+    if (saleOffers[productId]) {
+      const badge = document.createElement('div');
+      badge.className = 'sale-badge';
+      badge.textContent = saleOffers[productId];
+      card.style.position = 'relative';
+      card.appendChild(badge);
+    }
+  });
+}
+
+// Update product prices for sale
+function updateSalePrices() {
+  const saleDiscounts = {
+    'air-2025': { original: 69999, sale: 49999 },
+    'pro-2025': { original: 99999, sale: 69999 },
+    'max-2025': { original: 129999, sale: 89999 }
+  };
+  
+  // Update the products array with sale prices
+  products.forEach(product => {
+    if (saleDiscounts[product.id]) {
+      product.originalPrice = product.price;
+      product.price = saleDiscounts[product.id].sale;
+      product.savings = saleDiscounts[product.id].original - saleDiscounts[product.id].sale;
+    }
+  });
+}
+
+// Enhanced product rendering with sale prices
+function renderProductsWithSale(list = state.products) {
+  const container = qs('#product-container');
+  const template = qs('#productTemplate');
+  
+  if (!container || !template) return;
+  
+  container.innerHTML = '<div class="loading-container" style="grid-column: 1/-1; text-align: center; padding: 2rem;"><div class="loading"></div></div>';
+  
+  setTimeout(() => {
+    container.innerHTML = '';
+    
+    list.forEach((product, index) => {
+      const node = template.content.cloneNode(true);
+      const article = node.querySelector('article');
+      
+      article.style.animationDelay = `${index * 100}ms`;
+      article.classList.add('fade-in-up');
+      article.dataset.id = product.id;
+      
+      node.querySelector('.prod-img').src = product.img;
+      node.querySelector('.prod-img').alt = product.name;
+      node.querySelector('.prod-title').textContent = product.name;
+      node.querySelector('.prod-desc').textContent = product.desc;
+      
+      // Enhanced price display with sale pricing
+      const priceElement = node.querySelector('.price.small');
+      if (product.originalPrice) {
+        priceElement.innerHTML = `
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+            <span style="text-decoration: line-through; color: var(--muted); font-size: 0.85em;">₹${product.originalPrice.toLocaleString()}</span>
+            <span style="color: var(--accent-2); font-weight: 700;">₹${product.price.toLocaleString()}</span>
+            <small style="color: var(--gold); font-weight: 600;">Save ₹${product.savings.toLocaleString()}</small>
+          </div>
+        `;
+      } else {
+        priceElement.textContent = `₹${product.price.toLocaleString()}`;
+      }
+      
+      // Add sale badge
+      const saleOffers = {
+        'air-2025': '29% OFF',
+        'pro-2025': '30% OFF', 
+        'max-2025': '31% OFF'
+      };
+      
+      if (saleOffers[product.id]) {
+        const badge = document.createElement('div');
+        badge.className = 'sale-badge';
+        badge.textContent = saleOffers[product.id];
+        article.appendChild(badge);
+      }
+      
+      const addBtn = node.querySelector('.add-btn');
+      const viewBtn = node.querySelector('.view-btn');
+      
+      addBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        addToCart(product.id);
+        animateElement(addBtn, 'pulse');
+      });
+      
+      viewBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModal(product.id);
+      });
+      
+      container.appendChild(node);
+    });
+    
+    setTimeout(() => {
+      qsa('.fade-in-up').forEach(el => el.classList.add('visible'));
+    }, 100);
+  }, 300);
+}
+
+// Enhanced hero CTA with sale focus
+function enhanceHeroCTA() {
+  const heroBtns = qsa('.hero .btn');
+  heroBtns.forEach(btn => {
+    if (btn.textContent.includes('Explore')) {
+      btn.innerHTML = `
+        <i class="fas fa-fire"></i>
+        <span>Shop Sale Now</span>
+        <i class="fas fa-arrow-right"></i>
+      `;
+      btn.style.background = 'linear-gradient(135deg, #f59e0b, #ef4444)';
+      btn.style.animation = 'glow 2s infinite';
+    }
+  });
+  
+  // Update hero sale banner with countdown
+  const saleBanner = qs('.hero .sale-banner');
+  if (saleBanner) {
+    const timerSpan = saleBanner.querySelector('#timer');
+    if (timerSpan) {
+      saleBanner.innerHTML = `
+        <i class="fas fa-fire"></i>
+        <span>MEGA FESTIVE SALE: Ends In <span id="timer">${timerSpan.textContent}</span> - Up to 40% OFF!</span>
+        <i class="fas fa-fire"></i>
+      `;
+    }
+  }
+}
+
+// Initialize sale features
+document.addEventListener('DOMContentLoaded', () => {
+  // Apply sale pricing
+  updateSalePrices();
+  
+  // Re-render products with sale prices
+  renderProductsWithSale();
+  
+  // Show festive alert
+  showFestiveAlert();
+  
+  // Enhance hero CTA
+  enhanceHeroCTA();
+  
+  // Show sale notification after page load
+  setTimeout(() => {
+    showToast('🔥 Festive Sale is LIVE! Up to 40% OFF on all laptops!', 'info');
+  }, 2000);
+  
+  console.log('🎉 Festive sale features activated!');
+});
+
+// Add slideOutRight animation for alerts
+const saleStyle = document.createElement('style');
+saleStyle.textContent = `
+  @keyframes slideOutRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+  }
+`;
+document.head.appendChild(saleStyle);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <div class="sale-banner-top">
+  🔥 FESTIVE MEGA SALE: Up to 40% OFF Premium Laptops | Limited Time Only! 🔥
+</div>
+
+<!-- 3. Add this floating alert (place it before closing </body> tag) -->
+<div class="festive-alert" id="festiveAlert" onclick="goToSale()">
+  <button class="festive-close" onclick="event.stopPropagation(); closeFestiveAlert()">&times;</button>
+  <div class="festive-alert-content">
+    <div class="festive-icon">🎉</div>
+    <div class="festive-text">
+      <strong>MEGA SALE!</strong><br>
+      Save up to ₹40,000<br>
+      <small>Tap to explore deals</small>
+    </div>
+  </div>
+</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">
+            <i class="fas fa-bolt"></i>
+            Voltbook
+        </div>
+        <div class="nav-actions">
+            <input type="text" id="miniSearch" placeholder="Quick search..." class="mini-search">
+            <button class="icon-btn" id="darkModeToggle">🌙</button>
+            <button class="icon-btn" id="goToCart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>Premium Laptops for <span class="gradient-text">Modern Creators</span></h1>
+                <p class="lead">Experience cutting-edge performance with our revolutionary Voltbook series. Engineered for professionals who demand excellence.</p>
+                <div class="cta-row">
+                    <button class="btn primary-btn">
+                        <span>Explore Collection</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn ghost-btn">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="sale-banner">
+                    <i class="fas fa-fire"></i>
+                    <span>Festive Sale Ends In: <span id="timer">--:--:--</span></span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-laptop">
+                    <div class="laptop-3d"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="section-head">
+            <div>
+                <h2>Our <span class="gradient-text">Premium</span> Collection</h2>
+                <p class="section-desc">Discover laptops that redefine performance and style</p>
+            </div>
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                <select id="priceFilter" class="filter-select">
+                    <option value="all">All Prices</option>
+                    <option value="0-70000">Under ₹70k</option>
+                    <option value="70000-100000">₹70k - ₹1L</option>
+                    <option value="100000-999999">Above ₹1L</option>
+                </select>
+                <select id="sortSelect" class="sort-select">
+                    <option value="">Sort By</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid" id="product-container"></div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section">
+        <div class="section-head">
+            <h2>What Our <span class="gradient-text">Customers</span> Say</h2>
+            <div class="review-controls">
+                <button class="icon-btn" id="prevReview">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="icon-btn" id="nextReview">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <div id="reviewSlider" class="reviews-container"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+        <div class="dark-section">
+            <h2>Why Choose <span class="gradient-text">Voltbook</span>?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Lightning Performance</h3>
+                    <p>Next-gen processors and optimized cooling for peak performance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>All-Day Battery</h3>
+                    <p>Advanced battery technology that keeps you productive longer</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Premium Build</h3>
+                    <p>Military-grade durability with premium materials and finishes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in <span class="gradient-text">Touch</span></h2>
+                <p>Have questions? We're here to help you find the perfect laptop.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@voltbook.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9876543210</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mumbai, Maharashtra, India</span>
+                    </div>
+                </div>
+                <button class="btn secondary-btn" id="openNewsletter">
+                    <i class="fas fa-envelope-open"></i>
+                    Join Newsletter
+                </button>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn primary-btn">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fas fa-bolt"></i>
+                <span>Voltbook</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Voltbook. All rights reserved. Made with ❤️ in India</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal" style="display:none" aria-hidden="true">
+        <div class="modal-card">
+            <button class="close" id="closeModal">&times;</button>
+            <img id="modalImg" class="modal-img" alt="Product">
+            <div class="modal-body">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+                <div class="modal-meta">
+                    <div class="price large" id="modalPrice"></div>
+                    <button class="btn primary-btn" id="modalAddCart">
+                        <i class="fas fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <div class="cart-page" id="cartPage" style="display:none" aria-hidden="true">
+        <div class="cart-card">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+                <button class="close" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-summary">
+                <div class="cart-actions">
+                    <button class="btn ghost-btn small" id="clearCart">Clear All</button>
+                </div>
+                <div class="total-price">
+                    <strong>Total: <span id="cartTotal">₹0</span></strong>
+                </div>
+            </div>
+            <button class="btn primary-btn checkout-btn" id="checkoutBtn">
+                <i class="fas fa-credit-card"></i>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Newsletter Popup -->
+    <div class="popup" id="newsletterPopup" style="display:none" aria-hidden="true">
+        <div class="popup-card">
+            <button class="close" id="closePopup">&times;</button>
+            <div class="popup-content">
+                <i class="fas fa-gift popup-icon"></i>
+                <h3>Get Exclusive Deals!</h3>
+                <p>Subscribe to get 10% off your first order plus latest updates.</p>
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <div class="popup-actions">
+                    <button class="btn primary-btn" id="subscribeBtn">Subscribe</button>
+                    <button class="btn ghost-btn" id="noThanks">Maybe Later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Template -->
+    <template id="productTemplate">
+        <article class="product-card card">
+            <div class="product-image-container">
+                <img class="prod-img" alt="Product">
+                <div class="product-overlay">
+                    <button class="overlay-btn view-btn">
+                        <i class="fas fa-eye"></i>
+                        Quick View
+                    </button>
+                </div>
+            </div>
+            <div class="product-content">
+                <h3 class="prod-title"></h3>
+                <p class="prod-desc"></p>
+                <div class="card-row">
+                    <div class="price small"></div>
+                    <button class="btn secondary-btn small add-btn">
+                        <i class="fas fa-cart-plus"></i>
+                        Add
+                    </button>
+                </div>
+            </div>
+        </article>
+    </template>
+</body>
+</html>
